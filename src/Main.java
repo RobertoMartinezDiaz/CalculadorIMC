@@ -11,4 +11,11 @@ void main() {
     System.out.print("Ingrese su estatura en metros (ej. 1.75): ");
     double estatura = scanner.nextDouble();
     System.out.println("\n--- RESULTADOS ---");
+
+    double imc = calcularIMC(peso, estatura);
+    System.out.printf("Su Índice de Masa Corporal (IMC) es: %.2f\n", imc);
+}
+
+public static double calcularIMC(double peso, double estatura) {
+    return peso / (estatura * estatura);
 }
