@@ -17,6 +17,9 @@ void main() {
 
     String clasificacion = clasificarIMC(imc);
     System.out.println("Clasificación: " + clasificacion);
+
+    double pesoMinimo = calcularPesoMinimo(estatura);
+    System.out.printf("Su peso mínimo saludable debería ser: %.2f kg\n", pesoMinimo);
 }
 
 public static double calcularIMC(double peso, double estatura) {
@@ -33,4 +36,8 @@ public static String clasificarIMC(double imc) {
     } else {
         return "Obesidad";
     }
+}
+
+public static double calcularPesoMinimo(double estatura) {
+    return 18.5 * (estatura * estatura);
 }
