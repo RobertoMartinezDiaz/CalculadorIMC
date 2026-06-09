@@ -14,8 +14,23 @@ void main() {
 
     double imc = calcularIMC(peso, estatura);
     System.out.printf("Su Índice de Masa Corporal (IMC) es: %.2f\n", imc);
+
+    String clasificacion = clasificarIMC(imc);
+    System.out.println("Clasificación: " + clasificacion);
 }
 
 public static double calcularIMC(double peso, double estatura) {
     return peso / (estatura * estatura);
+}
+
+public static String clasificarIMC(double imc) {
+    if (imc < 18.5) {
+        return "Bajo peso";
+    } else if (imc >= 18.5 && imc < 25) {
+        return "Normal (Saludable)";
+    } else if (imc >= 25 && imc < 30) {
+        return "Sobrepeso";
+    } else {
+        return "Obesidad";
+    }
 }
