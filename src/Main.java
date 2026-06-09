@@ -20,6 +20,9 @@ void main() {
 
     double pesoMinimo = calcularPesoMinimo(estatura);
     System.out.printf("Su peso mínimo saludable debería ser: %.2f kg\n", pesoMinimo);
+
+    double pesoMaximo = calcularPesoMaximo(estatura);
+    System.out.printf("Su peso máximo saludable debería ser: %.2f kg\n", pesoMaximo);
 }
 
 public static double calcularIMC(double peso, double estatura) {
@@ -40,4 +43,8 @@ public static String clasificarIMC(double imc) {
 
 public static double calcularPesoMinimo(double estatura) {
     return 18.5 * (estatura * estatura);
+}
+
+public static double calcularPesoMaximo(double estatura) {
+    return 24.9 * (estatura * estatura);
 }
